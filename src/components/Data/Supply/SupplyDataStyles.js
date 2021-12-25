@@ -12,6 +12,7 @@ export const DataListWrap = styled.li`
 
 export const DataListImageWrap = styled.div`
   flex: 1;
+  min-width: 3rem;
 `;
 
 export const DataListImage = styled.div`
