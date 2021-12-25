@@ -8,7 +8,10 @@ import {
   DataBoxButton,
 } from "components/DataBox/DataBoxStyles";
 
-const DataBox = ({ children }) => {
+const DataBox = ({ data, children }) => {
+  //TODO: Destructure the data object
+  const { dataTitle, dataQuantity, dataUnit } = data;
+
   //TODO: Monitor the state of the DataBox Toggle
   const [toggleDataBox, setToggleDataBox] = useState(false);
 
@@ -21,13 +24,15 @@ const DataBox = ({ children }) => {
 
   return (
     <DataBoxWrap toggleDataBox={toggleDataBox}>
-      <DataBoxShow onClick={handleToggle}>
+      <DataBoxShow onClick={handleToggle} toggleDataBox={toggleDataBox}>
         <DataBoxTitle>
-          <h3>Market Cap</h3>
+          <h3>{dataTitle}</h3>
         </DataBoxTitle>
         <DataBoxContent>
-          <h4>12</h4>
-          <span>m</span>
+          <h4>
+            {dataQuantity}
+            <span>{dataUnit}</span>
+          </h4>
         </DataBoxContent>
       </DataBoxShow>
       {children && (

@@ -1,5 +1,4 @@
 import styled, { createGlobalStyle } from "styled-components";
-// import { QUERIES } from "../helpers/mediaQueries";
 
 export const GlobalStyles = createGlobalStyle`
     ///////////////////////////////////////////////////////
@@ -10,6 +9,7 @@ export const GlobalStyles = createGlobalStyle`
         --color-bg-200: hsl(257, 22%, 16%);
         --color-bg-300: hsl(260, 8%, 30%);
         --color-bg-400: hsl(259, 19%, 17%);
+        --color-bg-500: hsl(0, 0%, 29%);
 
         // FONT COLORS
         --color-font-100: hsl(0, 0%, 100%);

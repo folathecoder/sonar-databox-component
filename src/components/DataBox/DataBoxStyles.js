@@ -10,17 +10,22 @@ export const DataBoxWrap = styled.div`
   ${({ toggleDataBox }) =>
     toggleDataBox &&
     css`
-      box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.3);
-      border: solid 1px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0.75rem 1.25rem 0 rgba(0, 0, 0, 0.3);
+      border: solid 0.0625rem rgba(255, 255, 255, 0.1);
       background-color: var(--color-bg-400);
     `}
 `;
 
-export const DataBoxShow = styled.div``;
+export const DataBoxShow = styled.div`
+  ${({ toggleDataBox }) =>
+    toggleDataBox &&
+    css`
+      border-bottom: 0.1rem solid var(--color-bg-500);
+      padding-bottom: 0.5rem;
+    `}
+`;
 
 export const DataBoxTitle = styled.div`
-  /* display: inline-block; */
-
   h3 {
     font-size: 0.9375rem;
     line-height: 0.9375rem;
@@ -29,6 +34,7 @@ export const DataBoxTitle = styled.div`
     border-bottom: var(--border-dotted);
     padding-bottom: 0.2rem;
     display: inline-block;
+    text-transform: capitalize;
   }
 `;
 
@@ -36,23 +42,20 @@ export const DataBoxContent = styled.div`
   display: flex;
   padding-top: 0.5rem;
 
-  h4 {
-    font-size: 1.1875rem;
+  h4, span {
+    font-size: 1.4375rem;
     font-weight: var(--font-weight-900);
-    line-height: 1.1875rem;
+    line-height: 1.5rem;
     color: var(--color-font-100);
   }
 
   span {
     color: var(--color-font-200);
-    font-weight: var(--font-weight-500);
     padding-left: 0.1875rem;
   }
 `;
 
 export const DataBoxHidden = styled.div`
-  width: 20rem;
-  height: 10rem;
   display: none;
   transition: 100s;
 
