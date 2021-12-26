@@ -31,9 +31,13 @@ export const DataContentTitle = styled.div`
     font-size: 0.875rem;
     color: var(--color-font-100);
     text-transform: capitalize;
-    border-bottom: var(--border-dotted);
     padding-bottom: 0.2rem;
     display: inline-block;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: rgba(255, 255, 255, 0.2);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
   }
 `;
 

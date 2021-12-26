@@ -14,6 +14,7 @@ export const GlobalStyles = createGlobalStyle`
         // FONT COLORS
         --color-font-100: hsl(0, 0%, 100%);
         --color-font-200: hsl(0, 0%, 50%);
+        --color-font-300: hsl(0, 0%, 40%);
 
         // FONTS
         --font-pry-100: 'Inter', sans-serif;;

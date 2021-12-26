@@ -31,10 +31,13 @@ export const DataBoxTitle = styled.div`
     line-height: 0.9375rem;
     color: var(--color-font-200);
     font-weight: var(--font-weight-500);
-    border-bottom: var(--border-dotted);
-    padding-bottom: 0.2rem;
     display: inline-block;
     text-transform: capitalize;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: rgba(255, 255, 255, 0.2);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
   }
 `;
 
