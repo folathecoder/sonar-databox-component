@@ -86,6 +86,8 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: var(--font-weight-200);
         background-color: var(--color-bg-100);
         color: var(--color-font-100);
+        overflow-x: hidden;
+        position: relative;
     }
     ///////////////////////////////////////////////////////
     //TODO: TYPOGRAPHY

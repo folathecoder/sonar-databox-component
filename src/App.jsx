@@ -7,6 +7,7 @@ import DataBoxContainer from "components/DataBoxContainer/DataBoxContainer";
 import DataBox from "components/DataBox/DataBox";
 import SupplyData from "components/Data/Supply/SupplyData";
 import LiquidityData from "components/Data/Liquidity/LiquidityData";
+import Background from "components/Background/Background";
 
 // Data Imports
 import supply from "data/supplyData";
@@ -16,6 +17,7 @@ import { volume, holders } from "data/sampleData";
 function App() {
   return (
     <Main>
+      <Background />
       <GlobalStyles />
       <DataBoxContainer>
         <DataBox data={supply}>
