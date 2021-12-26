@@ -38,7 +38,9 @@ const DataBox = ({ data, children }) => {
       {children && (
         <DataBoxHidden toggleDataBox={toggleDataBox}>{children}</DataBoxHidden>
       )}
-      {children && <DataBoxButton event={handleToggle} state={toggleDataBox} />}
+      {children && (
+        <DataBoxButton event={handleToggle} toggleDataBox={toggleDataBox} />
+      )}
     </DataBoxWrap>
   );
 };
