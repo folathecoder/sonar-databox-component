@@ -5,8 +5,8 @@ import {
   DataBoxTitle,
   DataBoxContent,
   DataBoxHidden,
-  DataBoxButton,
 } from "components/DataBox/DataBoxStyles";
+import DataBoxButton from "components/DataBox/Children/DataBoxButton";
 
 const DataBox = ({ data, children }) => {
   //TODO: Destructure the data object
@@ -38,11 +38,7 @@ const DataBox = ({ data, children }) => {
       {children && (
         <DataBoxHidden toggleDataBox={toggleDataBox}>{children}</DataBoxHidden>
       )}
-      {children && (
-        <DataBoxButton onClick={handleToggle} toggleDataBox={toggleDataBox}>
-          <i className="fas fa-plus"></i>
-        </DataBoxButton>
-      )}
+      {children && <DataBoxButton event={handleToggle} state={toggleDataBox} />}
     </DataBoxWrap>
   );
 };

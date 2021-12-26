@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-
 export const DataTableBody = styled.tr`
   font-size: 0.875rem;
   background-color: rgba(216, 216, 216, 0.06);
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.04);
 
   td:nth-child(1) {
     padding-left: 0.625rem;
@@ -32,6 +32,7 @@ export const DataTableBodyItem = styled.td`
   span {
     color: var(--color-font-200);
     font-weight: var(--font-weight-500);
+    padding: 0rem 0.1rem;
   }
 `;
 

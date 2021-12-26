@@ -19,26 +19,19 @@ const LiquidityData = ({ data }) => {
         <h4>Recent transactions</h4>
       </DataHeader>
       <DataTable>
-        <DataTableHeader>
-          <DataTableHeaderItem></DataTableHeaderItem>
-          <DataTableHeaderItem>amount</DataTableHeaderItem>
-          <DataTableHeaderItem>value ({CURRENCY_SYMBOL})</DataTableHeaderItem>
-          <DataTableHeaderItem>time</DataTableHeaderItem>
-        </DataTableHeader>
-
-        {dataEntries.map((dataEntry) => {
-          return <LiquidityEntry key={dataEntry.id} data={dataEntry} />;
-        })}
-{/* 
-        <LiquidityEntry />
-        <LiquidityEntry />
-        <LiquidityEntry />
-        <LiquidityEntry />
-        <LiquidityEntry />
-        <LiquidityEntry />
-        <LiquidityEntry />
-        <LiquidityEntry />
-        <LiquidityEntry /> */}
+        <thead>
+          <DataTableHeader>
+            <DataTableHeaderItem></DataTableHeaderItem>
+            <DataTableHeaderItem>amount</DataTableHeaderItem>
+            <DataTableHeaderItem>value ({CURRENCY_SYMBOL})</DataTableHeaderItem>
+            <DataTableHeaderItem>time</DataTableHeaderItem>
+          </DataTableHeader>
+        </thead>
+        <tbody>
+          {dataEntries.map((dataEntry) => {
+            return <LiquidityEntry key={dataEntry.id} data={dataEntry} />;
+          })}
+        </tbody>
       </DataTable>
     </DataContainer>
   );

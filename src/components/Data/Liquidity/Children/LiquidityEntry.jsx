@@ -7,7 +7,7 @@ import {
 import { CURRENCY_SYMBOL } from "helpers/constants";
 
 const LiquidityEntry = ({ data }) => {
-  console.log(data);
+  //TODO: Destructure the data props
   const { amount, value, time } = data;
 
   return (
