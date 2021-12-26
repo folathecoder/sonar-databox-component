@@ -32,7 +32,7 @@ const liquidity = {
         wbtc: 3.1161,
         dai: 787.0,
       },
-      value: "3,172,800",
+      value: "800",
       time: {
         value: "20",
         unit: "h",

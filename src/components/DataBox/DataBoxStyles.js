@@ -26,6 +26,9 @@ export const DataBoxShow = styled.div`
 `;
 
 export const DataBoxTitle = styled.div`
+  /* background: red; */
+  /* display: flex; */
+
   h3 {
     font-size: 0.9375rem;
     line-height: 0.9375rem;
@@ -38,6 +41,7 @@ export const DataBoxTitle = styled.div`
     text-decoration-color: rgba(255, 255, 255, 0.2);
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
+    white-space: nowrap;
   }
 `;
 
@@ -45,11 +49,13 @@ export const DataBoxContent = styled.div`
   display: flex;
   padding-top: 0.5rem;
 
-  h4, span {
+  h4,
+  span {
     font-size: 1.4375rem;
     font-weight: var(--font-weight-900);
     line-height: 1.5rem;
     color: var(--color-font-100);
+    white-space: nowrap;
   }
 
   span {

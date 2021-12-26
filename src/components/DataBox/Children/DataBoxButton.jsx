@@ -21,7 +21,7 @@ const DataBoxBtn = styled(animated.button)`
 const DataBoxButton = ({ event, toggleDataBox }) => {
   //TODO: Animation => Using react-spring library to change the properties of the buttton on toggleDataBox change
   const spin = useSpring({
-    transform: toggleDataBox ? "rotateZ(405deg)" : "rotateZ(0deg)",
+  transform: toggleDataBox ? "rotateZ(45deg)" : "rotateZ(0deg)",
     width: toggleDataBox ? "1.75rem" : "0.875rem",
     height: toggleDataBox ? "1.75rem" : "0.875rem",
     margin: toggleDataBox ? "0.3rem" : "0rem",

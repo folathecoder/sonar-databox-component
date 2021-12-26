@@ -19,19 +19,6 @@ export const DataTable = styled.table`
   border-spacing: 0 0.5rem;
   font-weight: var(--font-weight-500);
   font-size: 0.875rem;
-
-  tr:first-child td:first-child {
-    border-top-left-radius: 10px;
-  }
-  tr:first-child td:last-child {
-    border-top-right-radius: 10px;
-  }
-  tr:last-child td:first-child {
-    border-bottom-left-radius: 10px;
-  }
-  tr:last-child td:last-child {
-    border-bottom-right-radius: 10px;
-  }
 `;
 
 export const DataTableHeader = styled.tr`
@@ -47,17 +34,13 @@ export const DataTableHeader = styled.tr`
     padding-left: 0.625rem;
   }
 
-  th:nth-child(2) {
+  th:nth-child(2), th:nth-child(3) {
     text-align: left;
   }
 
-  th:nth-child(4) {
+  /* th:nth-child(4) {
     text-align: right;
     padding-right: 0.625rem;
-  }
+  } */
 `;
-export const DataTableHeaderItem = styled.th`
-  /* font-size: 0.625rem;
-  text-transform: uppercase;
-  color: var(--color-font-300); */
-`;
+export const DataTableHeaderItem = styled.th``;

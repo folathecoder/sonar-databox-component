@@ -11,6 +11,7 @@ import LiquidityData from "components/Data/Liquidity/LiquidityData";
 // Data Imports
 import supply from "data/supplyData";
 import liquidity from "data/liquidityData";
+import { volume, holders } from "data/sampleData";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
         <DataBox data={liquidity}>
           <LiquidityData data={liquidity} />
         </DataBox>
+        <DataBox data={holders} />
+        <DataBox data={volume} />
       </DataBoxContainer>
     </Main>
   );

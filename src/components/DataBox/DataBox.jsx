@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   DataBoxWrap,
   DataBoxShow,
@@ -7,6 +7,9 @@ import {
   DataBoxHidden,
 } from "components/DataBox/DataBoxStyles";
 import DataBoxButton from "components/DataBox/Children/DataBoxButton";
+
+//TODO: Initiate a ThemeContext to share statewith children
+export const ThemeContext = React.createContext();
 
 const DataBox = ({ data, children }) => {
   //TODO: Destructure the data object
@@ -23,25 +26,29 @@ const DataBox = ({ data, children }) => {
   };
 
   return (
-    <DataBoxWrap toggleDataBox={toggleDataBox}>
-      <DataBoxShow onClick={handleToggle} toggleDataBox={toggleDataBox}>
-        <DataBoxTitle>
-          <h3>{dataTitle}</h3>
-        </DataBoxTitle>
-        <DataBoxContent>
-          <h4>
-            {dataQuantity}
-            <span>{dataUnit}</span>
-          </h4>
-        </DataBoxContent>
-      </DataBoxShow>
-      {children && (
-        <DataBoxHidden toggleDataBox={toggleDataBox}>{children}</DataBoxHidden>
-      )}
-      {children && (
-        <DataBoxButton event={handleToggle} toggleDataBox={toggleDataBox} />
-      )}
-    </DataBoxWrap>
+    <ThemeContext.Provider value={toggleDataBox}>
+      <DataBoxWrap toggleDataBox={toggleDataBox}>
+        <DataBoxShow onClick={handleToggle} toggleDataBox={toggleDataBox}>
+          <DataBoxTitle>
+            <h3>{dataTitle}</h3>
+          </DataBoxTitle>
+          <DataBoxContent>
+            <h4>
+              {dataQuantity}
+              <span>{dataUnit}</span>
+            </h4>
+          </DataBoxContent>
+        </DataBoxShow>
+        {children && (
+          <DataBoxHidden toggleDataBox={toggleDataBox}>
+            {children}
+          </DataBoxHidden>
+        )}
+        {children && (
+          <DataBoxButton event={handleToggle} toggleDataBox={toggleDataBox} />
+        )}
+      </DataBoxWrap>
+    </ThemeContext.Provider>
   );
 };
 

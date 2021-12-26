@@ -2,28 +2,31 @@ import styled from "styled-components";
 
 export const DataTableBody = styled.tr`
   font-size: 0.875rem;
-  background-color: rgba(216, 216, 216, 0.06);
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.04);
 
   td:nth-child(1) {
     padding-left: 0.625rem;
   }
 
-  td:nth-child(3) {
-    text-align: center;
-  }
-
   td:nth-child(4) {
     text-align: right;
     padding-right: 0.625rem;
   }
+
+  tr:first-child,
+  td:first-child {
+    border-radius: 0.53125rem 0 0 0.53125rem;
+  }
+
+  tr:last-child,
+  td:last-child {
+    border-radius: 0 0.53125rem 0.53125rem 0;
+  }
 `;
 export const DataTableBodyItem = styled.td`
   padding: 0.5rem 0rem;
-  display: flex:
-  align-items: flex-start;
-  margin-top: 0.5rem;
   vertical-align: top;
+  background-color: rgba(216, 216, 216, 0.06);
 
   i {
     font-size: 1.25rem;
@@ -37,5 +40,5 @@ export const DataTableBodyItem = styled.td`
 `;
 
 export const PriceChange = styled.p`
-  color: red;
+  color: hsl(339, 100%, 43%);
 `;
