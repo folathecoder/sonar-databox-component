@@ -37,10 +37,5 @@ export const DataTableHeader = styled.tr`
   th:nth-child(2), th:nth-child(3) {
     text-align: left;
   }
-
-  /* th:nth-child(4) {
-    text-align: right;
-    padding-right: 0.625rem;
-  } */
 `;
 export const DataTableHeaderItem = styled.th``;
