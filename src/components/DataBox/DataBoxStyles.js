@@ -26,8 +26,6 @@ export const DataBoxShow = styled.div`
 `;
 
 export const DataBoxTitle = styled.div`
-  /* background: red; */
-  /* display: flex; */
 
   h3 {
     font-size: 0.9375rem;

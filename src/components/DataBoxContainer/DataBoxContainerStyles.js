@@ -22,7 +22,6 @@ export const DataWrap = styled.div`
 
   & > * {
     margin-right: 0.75rem;
-    /* width: 100%; */
   }
 
   &::-webkit-scrollbar {
