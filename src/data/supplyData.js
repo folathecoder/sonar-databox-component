@@ -4,8 +4,20 @@ import dev from "assets/images/databoxes/supplyData/dev.png";
 
 const supply = {
   dataTitle: "total supply",
-  dataQuantity: "800",
-  dataUnit: "B",
+  dataItems: [
+    {
+      id: 1,
+      dataHeading: "mood",
+      dataQuantity: "800",
+      dataUnit: "B",
+    },
+    {
+      id: 2,
+      dataHeading: "growth",
+      dataQuantity: "800",
+      dataUnit: "B",
+    },
+  ],
   dataEntries: [
     {
       id: 1,

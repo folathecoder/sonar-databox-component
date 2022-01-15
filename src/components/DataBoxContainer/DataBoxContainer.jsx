@@ -1,13 +1,16 @@
 import {
   DataContainer,
+  DataDiv,
   DataWrap,
 } from "components/DataBoxContainer/DataBoxContainerStyles";
 
 const DataBoxContainer = ({ children }) => {
   return (
-    <DataContainer>
-      <DataWrap>{children}</DataWrap>
-    </DataContainer>
+    <DataDiv>
+      <DataContainer>
+        <DataWrap>{children}</DataWrap>
+      </DataContainer>
+    </DataDiv>
   );
 };
 

@@ -1,14 +1,17 @@
 import styled, { css } from "styled-components";
 
 export const DataBoxWrap = styled.div`
+  height: 100%;
   background-color: var(--color-bg-200);
   padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
-  position: relative;
   cursor: pointer;
+  position: relative;
+  z-index: 10;
 
-  ${({ toggleDataBox }) =>
+  ${({ toggleDataBox, hiddenBox }) =>
     toggleDataBox &&
+    hiddenBox &&
     css`
       box-shadow: 0 0.75rem 1.25rem 0 rgba(0, 0, 0, 0.3);
       border: solid 0.0625rem rgba(255, 255, 255, 0.1);
@@ -17,8 +20,14 @@ export const DataBoxWrap = styled.div`
 `;
 
 export const DataBoxShow = styled.div`
-  ${({ toggleDataBox }) =>
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  ${({ toggleDataBox, hiddenBox }) =>
     toggleDataBox &&
+    hiddenBox &&
     css`
       border-bottom: 0.1rem solid var(--color-bg-500);
       padding-bottom: 0.5rem;
@@ -26,7 +35,6 @@ export const DataBoxShow = styled.div`
 `;
 
 export const DataBoxTitle = styled.div`
-
   h3 {
     font-size: 0.9375rem;
     line-height: 0.9375rem;
@@ -43,9 +51,14 @@ export const DataBoxTitle = styled.div`
   }
 `;
 
+export const DataBoxContentWrap = styled.div`
+  display: flex;
+`;
+
 export const DataBoxContent = styled.div`
   display: flex;
-  padding-top: 0.5rem;
+  flex-direction: column;
+  justify-content: flex-end;
 
   h4,
   span {
@@ -59,6 +72,24 @@ export const DataBoxContent = styled.div`
   span {
     color: var(--color-font-200);
     padding-left: 0.1875rem;
+  }
+
+  ${({ index }) =>
+    index === 1 &&
+    css`
+      margin-left: 19px;
+      padding-left: 15px;
+      border-left: 1px dashed rgba(255, 255, 255, 0.2);
+    `}
+`;
+
+export const DataBoxSubHeading = styled.div`
+  p {
+    font-size: 13px;
+    color: var(--color-font-100);
+    opacity: 0.5;
+    font-weight: 500;
+    text-transform: capitalize;
   }
 `;
 

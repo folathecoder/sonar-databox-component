@@ -1,6 +1,19 @@
 const liquidity = {
   dataTitle: "liquidity",
-  dataQuantity: "858,919,511",
+  dataItems: [
+    {
+      id: 1,
+      dataHeading: "mood",
+      dataQuantity: "858,919,511",
+      dataUnit: "B",
+    },
+    {
+      id: 2,
+      // dataHeading: "growth",
+      dataQuantity: "800",
+      dataUnit: "B",
+    },
+  ],
   dataEntries: [
     {
       id: 1,

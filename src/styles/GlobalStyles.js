@@ -101,6 +101,8 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 1.2rem;
         line-height: 1.2rem;
     }
+
+    
     
 `;
 
@@ -108,4 +110,5 @@ export const Main = styled.main`
   max-width: 57rem;
   min-height: 100vh;
   margin: var(--center-container);
+  /* background-color: green; */
 `;
